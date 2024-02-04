@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate.jdbc.time_zone: value="UTC"
+  datasource:
+    platform: postgres
+    url: "jdbc:postgresql://localhost:5432/search_engine"
+    username: artzagger
+    password: 123
+    driverClassName: org.postgresql.Driver
+
+
+
+indexing-settings:
+    sites:
+      - url: http://www.playback.ru
+        name: PlayBack.Ru
+      - url: https://ipfran.ru/
+        name: IpFran
+#      - url: https://www.svetlovka.ru/
+#        name: Svetlovka
